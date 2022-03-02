@@ -4,7 +4,7 @@ on:
     branches: [ main ]
 jobs:
   build_on_centos:
-    runs-on: centos:latest
+    runs-on: ubuntu:latest
     steps:
       - name: checkout branch
         uses: actions/checkout@v2
