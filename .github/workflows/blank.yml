@@ -7,7 +7,7 @@ jobs:
     runs-on: centos:latest
     steps:
       - name: checkout branch
-        run: actions/checkout@v2
+        uses: actions/checkout@v2
       - name: see  the direcory
         run: |
           cat /etc/os-release
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout branch
-        run: actions/checkout@v2
+        uses: actions/checkout@v2
       - name: see  the direcory
         run: |
           cat /etc/os-release
