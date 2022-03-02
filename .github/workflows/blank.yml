@@ -2,15 +2,22 @@ name: CI
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 jobs:
-  build: 
+  build_on_centos:
+    runs-on: centos:latest
+    steps:
+      - name: checkout branch
+        run: actions/checkout@v2
+      - name: see  the direcory
+        run: |
+          cat /etc/os-release
+          echo "this is the os"  
+  build_on_ubuntu:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Run a one-line script
+      - name: checkout branch
+        run: actions/checkout@v2
+      - name: see  the direcory
         run: |
-          echo "test"
-          echo "testing"
-    
+          cat /etc/os-release
+          echo "this is the os"     
